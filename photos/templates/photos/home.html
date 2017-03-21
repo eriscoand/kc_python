@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+    <h1>Welcome to hell</h1>
+    {% if photo_list|length > 0 %}
+        <h2>Last photos</h2>
+        {% for photo in photo_list %}
+            <img src="{{ photo.url }}" alt="{{ photo.name }}" height="150px" />
+        {% endfor %}
+    {% else %}
+        <h2>No Photos :(</h2>
+    {% endif %}
+</body>
+</html>
